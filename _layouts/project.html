@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>{{page.title | default: "YYYY QQ Project Name"}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  <body class="w-100 pa4 sans-serif dark-gray bg-washed-yellow lh-copy">
+
+<h1 class="mb2">{{page.title | default: "YYYY QQ Project Name"}}</h1>
+<p class="mt0">{{page.description | default: "One-sentence description of this project"}}</p>
+
+<h2 class="mt5 pt3 bt b--dark-gray">1. Understand</h2>
+
+<h3 class="mt4">Design requirements</h3>
+<dl>
+<dt class="b mt2">Why are we doing this?</dt>
+  <dd class="ml0">{{page.why | default: '<i class="mid-gray">A description of the problem and/or opportunity</i>' | smartify}}</dd>
+<dt class="b mt2">What are the desired business outcomes?</dt>
+  <dd class="ml0">{{page.what | default: '<i class="mid-gray">Metrics to move, like increase X by Y%</i>' | smartify}}</dd>
+<dt class="b mt2">Who will use this? What are their goals?</dt>
+  <dd class="ml0">{{page.who | default: '<i class="mid-gray">There may be different types of customers with different goals, aligned with business goals or not</i>' | smartify}}</dd>
+<dt class="b mt2">When do we want to ship this?</dt>
+  <dd class="ml0">{{page.when | default: '<i class="mid-gray">Informs how we will budget our time in the process</i>'}}</dd>
+</dl>
+
+<h3 class="mt4">Stakeholders</h3>
+<dl>
+<dt class="b mt2">Decider</dt>
+  <dd class="ml0">{{page.decider | default: '<i class="mid-gray">One person: advances the project from step to step'}}</i></dd>
+<dt class="b mt2">Accountable</dt>
+  <dd class="ml0">{{page.accountable | default: '<i class="mid-gray">One person: accountable for the completion of the project'}}</i></dd>
+<dt class="b mt2">Responsible</dt>
+  <dd class="ml0">{{page.responsible | default: '<i class="mid-gray">One or more people: designing and building the solution'}}</i></dd>
+<dt class="b mt2">Consulted</dt>
+  <dd class="ml0">{{page.consulted | default: '<i class="mid-gray">One or more people: asked for input to inform the design'}}</i></dd>
+<dt class="b mt2">Informed</dt>
+  <dd class="ml0">{{page.informed | default: '<i class="mid-gray">One or more people: informed about how the project is going'}}</i></dd>
+</dl>
+
+<h3 class="mt4">Rough plan</h3>
+<table class="collapse b--dark-gray pv2 ph3">
+  <thead>
+    <tr>
+      <th class="ba bg-black-10 tl pv2 ph3">Step</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Tasks</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Estimate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="b ba pv2 ph3 tl v-top">Understand</th>
+      <td class="ba pv2 ph3">{{page.plan-understand | default: '<i class="mid-gray">Usually, straightforward completion of this step</i>' | smartify}}</td>
+      <td class="ba pv2 ph3 v-top">{{page.plan-understand-date | default: '<i class="mid-gray">Date or timeframe</i>'}}</td>
+    </tr>
+    <tr>
+      <th class="b ba pv2 ph3 tl v-top">Diverge</th>
+      <td class="ba pv2 ph3">{{page.plan-diverge | default: '<i class="mid-gray">Roughly what we plan to do in this step</i>' | smartify}}</td>
+      <td class="ba pv2 ph3 v-top">{{page.plan-diverge-date | default: '<i class="mid-gray">Date or timeframe</i>'}}</td>
+    </tr>
+    <tr>
+      <th class="b ba pv2 ph3 tl v-top">Converge</th>
+      <td class="ba pv2 ph3">{{page.plan-converge | default: '<i class="mid-gray">Guess at what we might do in this step</i>' | smartify}}</td>
+      <td class="ba pv2 ph3 v-top">{{page.plan-converge-date | default: '<i class="mid-gray">Date or timeframe</i>'}}</td>
+    </tr>
+    <tr>
+      <th class="b ba pv2 ph3 tl v-top">Deliver</th>
+      <td class="ba pv2 ph3">{{page.plan-deliver | default: '<i class="mid-gray">Guess at what we might do in this step</i>' | smartify}}</td>
+      <td class="ba pv2 ph3 v-top">{{page.plan-deliver-date | default: '<i class="mid-gray">Date or timeframe</i>'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="mt4">Understand review sessions</h3>
+<table class="collapse b--dark-gray pv2 ph3">
+  <thead>
+    <tr>
+      <th class="ba bg-black-10 tl pv2 ph3">Type</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Date</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Notes or Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="ba pv2 ph3 tl v-top">Design Review</th>
+      <td class="ba pv2 ph3 v-top">{{page.review-understand-design-date | default: '<i class="mid-gray">Date</i>'}}</td>
+      <td class="ba pv2 ph3">{{page.review-understand-design-notes | default: '<i class="mid-gray">Notes or link</i>' | smartify}}</td>
+    </tr>
+    <tr>
+      <th class="ba pv2 ph3 tl v-top">Stakeholder Review</th>
+      <td class="ba pv2 ph3 v-top">{{page.review-understand-stakeholders-date | default: '<i class="mid-gray">Date</i>'}}</td>
+      <td class="ba pv2 ph3">{{page.review-understand-stakeholders-notes | default: '<i class="mid-gray">Notes or link, decision to move to Diverge</i>' | smartify}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="mt5 pt3 bt b--dark-gray">2. Diverge</h2>
+
+<h3 class="mt4">Background research</h3>
+<dl>
+  <dt class="b mt2">How does it work?</dt>
+    <dd class="ml0">{{page.documentation | default: '<i class="mid-gray">Documentation from design team and others</i>' | smartify}}</dd>
+  <dt class="b mt2">How is it used?</dt>
+    <dd class="ml0">{{page.metrics | default: '<i class="mid-gray">Metrics and analytics: Chart.io, FullStory, Google Analytics, Mixpanel, etc</i>' | smartify}}</dd>
+  <dt class="b mt2">What do customers think of it?</dt>
+    <dd class="ml0">{{page.what-customers-think | default: '<i class="mid-gray">Customer feedback, customer service insights, survey results</i>' | smartify}}</dd>
+  <dt class="b mt2">What do we think of it?</dt>
+    <dd class="ml0">{{page.what-we-think | default: '<i class="mid-gray">Input from design, stakeholders, and subject matter experts</i>' | smartify}}</dd>
+  <dt class="b mt2">What do competitors do?</dt>
+    <dd class="ml0">{{page.what-competitors-do | default: '<i class="mid-gray">Competitive analysis</i>' | smartify}}</dd>
+</dl>
+
+<h3 class="mt4 mb2">Possible approaches</h3>
+<p class="mt0">{{page.possible-approaches | default: '<i class="mid-gray">Sketches and brief rationales</i>' | smartify}}</p>
+
+<h3 class="mt4 mb2">Selected approach(es)</h3>
+<p class="mt0">{{page.selected-approaches | default: '<i class="mid-gray">Foundations (screens/paths, user contexts, responsibilities, heirarchies, errors), wireframes and/or lo-fi prototypes. If multiple approaches will be tested, provide for each approach.</i>' | smartify}}</p>
+
+<h3 class="mt4 mb2">Diverge review sessions</h3>
+<table class="collapse b--dark-gray pv2 ph3">
+  <thead>
+    <tr>
+      <th class="ba bg-black-10 tl pv2 ph3">Type</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Date</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Notes or Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="ba pv2 ph3 tl v-top">Design Review</th>
+      <td class="ba pv2 ph3 v-top">{{page.review-diverge-design-date | default: '<i class="mid-gray">Date</i>'}}</td>
+      <td class="ba pv2 ph3">{{page.review-diverge-design-notes | default: '<i class="mid-gray">Notes or link</i>' | smartify}}</td>
+    </tr>
+    <tr>
+      <th class="ba pv2 ph3 tl v-top">Stakeholder Review</th>
+      <td class="ba pv2 ph3 v-top">{{page.review-diverge-stakeholders-date | default: '<i class="mid-gray">Date</i>'}}</td>
+      <td class="ba pv2 ph3">{{page.review-diverge-stakeholders-notes | default: '<i class="mid-gray">Notes or link, decision to move to Converge</i>' | smartify}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="mt5 pt3 bt b--dark-gray">3. Converge</h2>
+
+<h3 class="mt4 mb2">Refined approach(es)</h3>
+<p class="mt0">{{page.refined-approaches | default: '<i class="mid-gray">Comps (mobile and desktop) and/or hi-fi prototypes and/or HTML/CSS, all final copy, alt text, and page titles. If multiple approaches will be tested, provide for each approach.' | smartify}}</i></p>
+
+<h3 class="mt4 mb2">Converge review sessions</h3>
+<table class="collapse b--dark-gray pv2 ph3">
+  <thead>
+    <tr>
+      <th class="ba bg-black-10 tl pv2 ph3">Type</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Date</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Notes or Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="ba pv2 ph3 tl v-top">Design Review</th>
+      <td class="ba pv2 ph3 v-top">{{page.review-converge-design-date | default: '<i class="mid-gray">Date</i>'}}</td>
+      <td class="ba pv2 ph3">{{page.review-converge-design-notes | default: '<i class="mid-gray">Notes or link</i>'}}</td>
+    </tr>
+    <tr>
+      <th class="ba pv2 ph3 tl v-top">Stakeholder Review</th>
+      <td class="ba pv2 ph3 v-top">{{page.review-converge-stakeholders-date | default: '<i class="mid-gray">Date</i>'}}</td>
+      <td class="ba pv2 ph3">{{page.review-converge-stakeholders-notes | default: '<i class="mid-gray">Notes or link, decision to move to Deliver</i>'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="mt5 pt3 bt b--dark-gray">4. Deliver</h2>
+
+<h3 class="mt4 mb2">Deliver review sessions</h3>
+<table class="collapse b--dark-gray pv2 ph3">
+  <thead>
+    <tr>
+      <th class="ba bg-black-10 tl pv2 ph3">Type</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Date</th>
+      <th class="ba bg-black-10 tl pv2 ph3">Notes or Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="ba pv2 ph3 tl v-top">Design Review</th>
+      <td class="ba pv2 ph3 v-top">{{page.review-deliver-design-date | default: '<i class="mid-gray">Date</i>'}}</td>
+      <td class="ba pv2 ph3">{{page.review-deliver-design-notes | default: '<i class="mid-gray">Notes or link</i>'}}</td>
+    </tr>
+    <tr>
+      <th class="ba pv2 ph3 tl v-top">Stakeholder Review</th>
+      <td class="ba pv2 ph3 v-top">{{page.review-deliver-stakeholders-date | default: '<i class="mid-gray">Date</i>'}}</td>
+      <td class="ba pv2 ph3">{{page.review-deliver-stakeholders-notes | default: '<i class="mid-gray">Notes or link, decision to ship</i>'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 class="mt4 mb2">Evidence</h3>
+<h4 class="mb2">It works like we intended</h4>
+<p class="mt0">{{page.evidence-intent | default: '<i class="mid-gray">Confirmation of same</i>'}}</p>
+
+<h4 class="mb2">It is accessible</h4>
+<p class="mt0">{{page.evidence-accessible | default: '<i class="mid-gray">Confirmation it meets accessibility criteria</i>'}}</p>
+
+<h3 class="mt4 mb2">Documentation</h3>
+<p class="mt0">{{page.final-documentation | default: '<i class="mid-gray">Link to final documentation of intent</i>'}}</p>
+
+  </body>
+</html>
